@@ -1,0 +1,220 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f6f9; /* Cor de fundo neutra */
+    color: #333; /* Texto mais escuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Seção de Teoria */
+#theorySection {
+    width: 85%;
+    max-width: 1000px;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Sombras mais intensas */
+    margin-bottom: 40px;
+    text-align: left;
+    border-radius: 15px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    font-size: 18px; /* Aumenta o tamanho da fonte para melhor leitura */
+}
+
+/* Título principal */
+#theorySection h1 {
+    font-size: 40px;
+    color: #1f1f1f; /* Texto mais escuro para o título */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Parágrafos de teoria */
+#theorySection p {
+    font-size: 20px;
+    color: #1f1f1f; /* Texto mais escuro para boa legibilidade */
+    line-height: 1.7; /* Aumenta o espaçamento entre as linhas */
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+#theorySection h2 {
+    font-size: 28px;
+    color: #1f1f1f; /* Texto mais escuro para subtítulos */
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Listas */
+#theorySection ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    color: #1f1f1f; /* Texto mais escuro para listas */
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#theorySection ul li {
+    margin-bottom: 10px;
+}
+
+/* Botão de ação */
+#theorySection button {
+    padding: 14px 28px;
+    background-color: #3a7fa3; /* Azul suave */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+#theorySection button:hover {
+    background-color: #2f6e8e; /* Tom mais escuro */
+    transform: scale(1.05);
+}
+
+/* Seção de Simulação */
+#simulationSection {
+    display: none;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Sombras mais intensas */
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Título de simulação */
+#simulationSection h2 {
+    font-size: 28px;
+    color: #1f1f1f; /* Texto mais escuro */
+    margin-bottom: 20px;
+}
+
+/* Controles deslizantes */
+#controls {
+    margin-bottom: 20px;
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+/* Sliders */
+input[type="range"] {
+    width: 100%;
+    height: 8px;
+    background: #00bfff; /* Azul claro */
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+/* Valor de cada controle */
+span {
+    display: inline-block;
+    font-weight: bold;
+    color: #333; /* Cor mais escura para o valor */
+    margin-top: 5px;
+}
+
+/* Canvas */
+#waveCanvasWrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 10px;
+}
+
+#waveCanvas {
+    width: 100%;
+    height: 400px;
+    background-color: #f0f8ff; /* Azul claro */
+    border: 2px solid #00bfff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Opções de tipo de onda */
+.type-option {
+    padding: 8px 16px;
+    background-color: #3a7fa3; /* Azul suave */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.type-option:hover {
+    background-color: #2f6e8e; /* Tom mais escuro */
+}
+
+/* Explicação do efeito sonoro */
+#explanation {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #1f1f1f; /* Texto mais escuro */
+    background: #f0f8ff; /* Cor azul suave */
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* Responsividade - Ajustes para telas menores */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #theorySection {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #simulationSection {
+        padding: 10px;
+    }
+
+    #waveCanvas {
+        height: 300px;
+    }
+
+    #theorySection button {
+        font-size: 18px;
+    }
+
+    .type-option {
+        font-size: 16px;
+    }
+}
