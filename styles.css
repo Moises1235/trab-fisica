@@ -8,7 +8,7 @@
 /* Corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background: #f4f6f9; /* Cor de fundo neutra */
+    background: #eaf4f7; /* Fundo suave e claro */
     color: #333; /* Texto mais escuro */
     display: flex;
     flex-direction: column;
@@ -17,43 +17,43 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
-
 /* Seção de Teoria */
 #theorySection {
     width: 85%;
     max-width: 1000px;
     padding: 40px;
     background: #ffffff;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Sombras mais intensas */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombras sutis */
     margin-bottom: 40px;
     text-align: left;
     border-radius: 15px;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-    font-size: 18px; /* Aumenta o tamanho da fonte para melhor leitura */
+    font-size: 18px;
+    background: #f9f9f9; /* Fundo levemente cinza */
 }
 
 /* Título principal */
 #theorySection h1 {
-    font-size: 40px;
-    color: #1f1f1f; /* Texto mais escuro para o título */
+    font-size: 36px;
+    color: #34495e; /* Cor de texto mais suave, cinza-escuro */
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase; /* Em maiúsculas para dar ênfase */
+    letter-spacing: 1px; /* Espaçamento mais leve entre as letras */
 }
 
 /* Parágrafos de teoria */
 #theorySection p {
-    font-size: 20px;
-    color: #1f1f1f; /* Texto mais escuro para boa legibilidade */
-    line-height: 1.7; /* Aumenta o espaçamento entre as linhas */
+    font-size: 18px;
+    color: #2c3e50; /* Cor de texto cinza-escuro mais suave */
+    line-height: 1.7;
     margin-bottom: 20px;
 }
 
 /* Subtítulos */
 #theorySection h2 {
-    font-size: 28px;
-    color: #1f1f1f; /* Texto mais escuro para subtítulos */
+    font-size: 26px;
+    color: #7f8c8d; /* Cor mais suave para subtítulos, cinza azulado */
     margin-top: 40px;
     margin-bottom: 10px;
     font-weight: 600;
@@ -63,8 +63,8 @@ body {
 #theorySection ul {
     list-style-type: disc;
     margin-left: 30px;
-    color: #1f1f1f; /* Texto mais escuro para listas */
-    font-size: 20px;
+    color: #2c3e50; /* Cor de texto mais suave para listas */
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
@@ -72,10 +72,15 @@ body {
     margin-bottom: 10px;
 }
 
+/* Alterando a cor de elementos importantes */
+#theorySection strong {
+    color: #e67e22; /* Laranja suave para destacar palavras importantes */
+}
+
 /* Botão de ação */
 #theorySection button {
     padding: 14px 28px;
-    background-color: #3a7fa3; /* Azul suave */
+    background-color: #3498db; /* Azul suave */
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -85,11 +90,45 @@ body {
     width: 100%;
     max-width: 250px;
     margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 #theorySection button:hover {
-    background-color: #2f6e8e; /* Tom mais escuro */
+    background-color: #2980b9; /* Tom de azul um pouco mais escuro */
     transform: scale(1.05);
+}
+
+/* Adicionando bordas e fundo colorido para as seções */
+#theorySection p:first-of-type {
+    background-color: #ecf0f1; /* Fundo muito suave e neutro */
+    border-left: 5px solid #bdc3c7; /* Borda sutil */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#theorySection p:nth-of-type(2) {
+    background-color: #f4f6f7; /* Fundo cinza claro */
+    color: #34495e; /* Texto mais escuro */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#theorySection h3 {
+    font-size: 24px;
+    color: #95a5a6; /* Cor cinza suave para os subtítulos das fórmulas */
+    margin-top: 30px;
+    font-weight: 600;
+    border-bottom: 2px solid #bdc3c7; /* Linha sutil embaixo */
+}
+
+/* Seção de fórmulas */
+#theorySection p code {
+    font-size: 18px;
+    background-color: #ecf0f1; /* Fundo suave para fórmulas */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7; /* Borda leve */
+    color: #7f8c8d; /* Cor cinza suave para as fórmulas */
 }
 
 /* Seção de Simulação */
@@ -99,7 +138,7 @@ body {
     max-width: 900px;
     padding: 20px;
     background: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); /* Sombras mais intensas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
     border-radius: 15px;
     text-align: center;
 }
@@ -107,7 +146,7 @@ body {
 /* Título de simulação */
 #simulationSection h2 {
     font-size: 28px;
-    color: #1f1f1f; /* Texto mais escuro */
+    color: #2c3e50;
     margin-bottom: 20px;
 }
 
@@ -124,7 +163,7 @@ body {
 input[type="range"] {
     width: 100%;
     height: 8px;
-    background: #00bfff; /* Azul claro */
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradiente entre azul e verde */
     border-radius: 5px;
     outline: none;
     opacity: 0.9;
@@ -139,7 +178,7 @@ input[type="range"]:hover {
 span {
     display: inline-block;
     font-weight: bold;
-    color: #333; /* Cor mais escura para o valor */
+    color: #333;
     margin-top: 5px;
 }
 
@@ -153,8 +192,8 @@ span {
 #waveCanvas {
     width: 100%;
     height: 400px;
-    background-color: #f0f8ff; /* Azul claro */
-    border: 2px solid #00bfff;
+    background-color: #ecf0f1; /* Azul claro e suave */
+    border: 2px solid #3498db;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -162,7 +201,7 @@ span {
 /* Opções de tipo de onda */
 .type-option {
     padding: 8px 16px;
-    background-color: #3a7fa3; /* Azul suave */
+    background-color: #3498db;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -172,15 +211,15 @@ span {
 }
 
 .type-option:hover {
-    background-color: #2f6e8e; /* Tom mais escuro */
+    background-color: #2980b9; /* Tom mais escuro */
 }
 
 /* Explicação do efeito sonoro */
 #explanation {
     margin-top: 20px;
     font-size: 20px;
-    color: #1f1f1f; /* Texto mais escuro */
-    background: #f0f8ff; /* Cor azul suave */
+    color: #2c3e50;
+    background: #ecf0f1;
     padding: 20px;
     border-radius: 10px;
     display: none;
